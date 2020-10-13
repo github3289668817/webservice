@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:cxf="http://cxf.apache.org/core"
+       xmlns:jaxws="http://cxf.apache.org/jaxws"
+       xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://cxf.apache.org/core
+        http://cxf.apache.org/schemas/core.xsd
+        http://cxf.apache.org/jaxws
+        http://cxf.apache.org/schemas/jaxws.xsd
+        http://cxf.apache.org/jaxrs
+        http://cxf.apache.org/schemas/jaxrs.xsd">
+
+    <!--
+        Spring整合ApacheCXF，客户端配置
+        关键点：
+            通过Spring整合ApacheCXF，创建客户端的代理对象，远程访问服务端。
+        jaxws:client
+            id  应用中注入的接口的代理对象的名称
+            address 服务端访问地址
+            serviceClass  指定接口路径，会根据该类型生成代理对象
+    -->
+    <jaxws:client
+            id="helloService"
+            serviceClass="per.xgt.service.HelloService"
+            address="http://localhost:8080/ws/hello">
+    </jaxws:client>
+
+
+</beans>

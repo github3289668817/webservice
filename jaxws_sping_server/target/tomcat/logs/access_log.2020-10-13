@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [13/Oct/2020:10:17:43 +0800] "GET /ws/hello?wsdl HTTP/1.1" 200 1289 http-bio-8080-exec-1 182
+0:0:0:0:0:0:0:1 - - [13/Oct/2020:10:17:43 +0800] "GET /favicon.ico HTTP/1.1" 404 973 http-bio-8080-exec-3 4
+127.0.0.1 - - [13/Oct/2020:10:39:38 +0800] "POST /ws/hello HTTP/1.1" 200 241 http-bio-8080-exec-1 203
+127.0.0.1 - - [13/Oct/2020:13:36:21 +0800] "POST /ws/userService/userService/user HTTP/1.1" 404 47 http-bio-8080-exec-1 65
